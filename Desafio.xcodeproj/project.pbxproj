@@ -1,0 +1,707 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		A044FB531DE0D8EA00AC74E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */; };
+		A044FB551DE0D8EA00AC74E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB541DE0D8EA00AC74E0 /* ViewController.swift */; };
+		A044FB581DE0D8EA00AC74E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A044FB561DE0D8EA00AC74E0 /* Main.storyboard */; };
+		A044FB5A1DE0D8EA00AC74E0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A044FB591DE0D8EA00AC74E0 /* Assets.xcassets */; };
+		A044FB5D1DE0D8EA00AC74E0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A044FB5B1DE0D8EA00AC74E0 /* LaunchScreen.storyboard */; };
+		A044FB681DE0D8EA00AC74E0 /* DesafioTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB671DE0D8EA00AC74E0 /* DesafioTests.swift */; };
+		A044FB731DE0D8EA00AC74E0 /* DesafioUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB721DE0D8EA00AC74E0 /* DesafioUITests.swift */; };
+		A044FB811DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB801DE0E05B00AC74E0 /* GooglePlacesAPIController.swift */; };
+		A044FB821DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB801DE0E05B00AC74E0 /* GooglePlacesAPIController.swift */; };
+		A044FB891DE0E74100AC74E0 /* GooglePlacePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB881DE0E74100AC74E0 /* GooglePlacePicker.framework */; };
+		A044FB8A1DE0E74100AC74E0 /* GooglePlacePicker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB881DE0E74100AC74E0 /* GooglePlacePicker.framework */; };
+		A044FB8C1DE0E76500AC74E0 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB8B1DE0E76500AC74E0 /* GooglePlaces.framework */; };
+		A044FB8D1DE0E76500AC74E0 /* GooglePlaces.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB8B1DE0E76500AC74E0 /* GooglePlaces.framework */; };
+		A044FB8F1DE0E78800AC74E0 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB8E1DE0E78800AC74E0 /* GoogleMapsBase.framework */; };
+		A044FB901DE0E78800AC74E0 /* GoogleMapsBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB8E1DE0E78800AC74E0 /* GoogleMapsBase.framework */; };
+		A044FB931DE0E7AB00AC74E0 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB911DE0E7AB00AC74E0 /* GoogleMaps.framework */; };
+		A044FB941DE0E7AB00AC74E0 /* GoogleMaps.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB911DE0E7AB00AC74E0 /* GoogleMaps.framework */; };
+		A044FB951DE0E7AB00AC74E0 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB921DE0E7AB00AC74E0 /* GoogleMapsCore.framework */; };
+		A044FB961DE0E7AB00AC74E0 /* GoogleMapsCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FB921DE0E7AB00AC74E0 /* GoogleMapsCore.framework */; };
+		A044FB981DE0F4F500AC74E0 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A044FB971DE0F4F500AC74E0 /* GooglePlaces.bundle */; };
+		A044FB991DE0F4F500AC74E0 /* GooglePlaces.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A044FB971DE0F4F500AC74E0 /* GooglePlaces.bundle */; };
+		A044FB9B1DE0F51400AC74E0 /* GooglePlacePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A044FB9A1DE0F51400AC74E0 /* GooglePlacePicker.bundle */; };
+		A044FB9C1DE0F51400AC74E0 /* GooglePlacePicker.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A044FB9A1DE0F51400AC74E0 /* GooglePlacePicker.bundle */; };
+		A044FB9E1DE0F51E00AC74E0 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A044FB9D1DE0F51E00AC74E0 /* GoogleMaps.bundle */; };
+		A044FB9F1DE0F51E00AC74E0 /* GoogleMaps.bundle in Resources */ = {isa = PBXBuildFile; fileRef = A044FB9D1DE0F51E00AC74E0 /* GoogleMaps.bundle */; };
+		A044FBA21DE0F54F00AC74E0 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBA11DE0F54F00AC74E0 /* Accelerate.framework */; };
+		A044FBA41DE0F55800AC74E0 /* CoreData.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBA31DE0F55800AC74E0 /* CoreData.framework */; };
+		A044FBA61DE0F57A00AC74E0 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBA51DE0F57A00AC74E0 /* CoreGraphics.framework */; };
+		A044FBA81DE0F57F00AC74E0 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBA71DE0F57F00AC74E0 /* CoreLocation.framework */; };
+		A044FBAA1DE0F58700AC74E0 /* CoreText.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBA91DE0F58700AC74E0 /* CoreText.framework */; };
+		A044FBAC1DE0F58A00AC74E0 /* GLKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBAB1DE0F58A00AC74E0 /* GLKit.framework */; };
+		A044FBAE1DE0F59500AC74E0 /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBAD1DE0F59500AC74E0 /* ImageIO.framework */; };
+		A044FBB01DE0F59D00AC74E0 /* libc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBAF1DE0F59D00AC74E0 /* libc++.tbd */; };
+		A044FBB21DE0F5A200AC74E0 /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBB11DE0F5A200AC74E0 /* libz.tbd */; };
+		A044FBB41DE0F5AB00AC74E0 /* OpenGLES.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBB31DE0F5AB00AC74E0 /* OpenGLES.framework */; };
+		A044FBB61DE0F5B200AC74E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBB51DE0F5B200AC74E0 /* QuartzCore.framework */; };
+		A044FBB81DE0F5BA00AC74E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBB71DE0F5BA00AC74E0 /* SystemConfiguration.framework */; };
+		A044FBBA1DE0F5BE00AC74E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBB91DE0F5BE00AC74E0 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		A044FB641DE0D8EA00AC74E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044FB471DE0D8EA00AC74E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A044FB4E1DE0D8EA00AC74E0;
+			remoteInfo = Desafio;
+		};
+		A044FB6F1DE0D8EA00AC74E0 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = A044FB471DE0D8EA00AC74E0 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = A044FB4E1DE0D8EA00AC74E0;
+			remoteInfo = Desafio;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		A044FB4F1DE0D8EA00AC74E0 /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		A044FB541DE0D8EA00AC74E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		A044FB571DE0D8EA00AC74E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		A044FB591DE0D8EA00AC74E0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		A044FB5C1DE0D8EA00AC74E0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		A044FB5E1DE0D8EA00AC74E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A044FB631DE0D8EA00AC74E0 /* DesafioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A044FB671DE0D8EA00AC74E0 /* DesafioTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioTests.swift; sourceTree = "<group>"; };
+		A044FB691DE0D8EA00AC74E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A044FB6E1DE0D8EA00AC74E0 /* DesafioUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = DesafioUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A044FB721DE0D8EA00AC74E0 /* DesafioUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DesafioUITests.swift; sourceTree = "<group>"; };
+		A044FB741DE0D8EA00AC74E0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A044FB801DE0E05B00AC74E0 /* GooglePlacesAPIController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GooglePlacesAPIController.swift; sourceTree = "<group>"; };
+		A044FB881DE0E74100AC74E0 /* GooglePlacePicker.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlacePicker.framework; sourceTree = "<group>"; };
+		A044FB8B1DE0E76500AC74E0 /* GooglePlaces.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GooglePlaces.framework; sourceTree = "<group>"; };
+		A044FB8E1DE0E78800AC74E0 /* GoogleMapsBase.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsBase.framework; sourceTree = "<group>"; };
+		A044FB911DE0E7AB00AC74E0 /* GoogleMaps.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMaps.framework; sourceTree = "<group>"; };
+		A044FB921DE0E7AB00AC74E0 /* GoogleMapsCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = GoogleMapsCore.framework; sourceTree = "<group>"; };
+		A044FB971DE0F4F500AC74E0 /* GooglePlaces.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlaces.bundle; path = GooglePlaces.framework/Versions/A/Resources/GooglePlaces.bundle; sourceTree = "<group>"; };
+		A044FB9A1DE0F51400AC74E0 /* GooglePlacePicker.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GooglePlacePicker.bundle; path = GooglePlacePicker.framework/Versions/A/Resources/GooglePlacePicker.bundle; sourceTree = "<group>"; };
+		A044FB9D1DE0F51E00AC74E0 /* GoogleMaps.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = GoogleMaps.bundle; path = GoogleMaps.framework/Versions/A/Resources/GoogleMaps.bundle; sourceTree = "<group>"; };
+		A044FBA11DE0F54F00AC74E0 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = System/Library/Frameworks/Accelerate.framework; sourceTree = SDKROOT; };
+		A044FBA31DE0F55800AC74E0 /* CoreData.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreData.framework; path = System/Library/Frameworks/CoreData.framework; sourceTree = SDKROOT; };
+		A044FBA51DE0F57A00AC74E0 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		A044FBA71DE0F57F00AC74E0 /* CoreLocation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreLocation.framework; path = System/Library/Frameworks/CoreLocation.framework; sourceTree = SDKROOT; };
+		A044FBA91DE0F58700AC74E0 /* CoreText.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreText.framework; path = System/Library/Frameworks/CoreText.framework; sourceTree = SDKROOT; };
+		A044FBAB1DE0F58A00AC74E0 /* GLKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLKit.framework; path = System/Library/Frameworks/GLKit.framework; sourceTree = SDKROOT; };
+		A044FBAD1DE0F59500AC74E0 /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		A044FBAF1DE0F59D00AC74E0 /* libc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libc++.tbd"; path = "usr/lib/libc++.tbd"; sourceTree = SDKROOT; };
+		A044FBB11DE0F5A200AC74E0 /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
+		A044FBB31DE0F5AB00AC74E0 /* OpenGLES.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGLES.framework; path = System/Library/Frameworks/OpenGLES.framework; sourceTree = SDKROOT; };
+		A044FBB51DE0F5B200AC74E0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		A044FBB71DE0F5BA00AC74E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		A044FBB91DE0F5BE00AC74E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		A044FB4C1DE0D8EA00AC74E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A044FBBA1DE0F5BE00AC74E0 /* UIKit.framework in Frameworks */,
+				A044FBB81DE0F5BA00AC74E0 /* SystemConfiguration.framework in Frameworks */,
+				A044FBB61DE0F5B200AC74E0 /* QuartzCore.framework in Frameworks */,
+				A044FBB41DE0F5AB00AC74E0 /* OpenGLES.framework in Frameworks */,
+				A044FBB21DE0F5A200AC74E0 /* libz.tbd in Frameworks */,
+				A044FBB01DE0F59D00AC74E0 /* libc++.tbd in Frameworks */,
+				A044FBAE1DE0F59500AC74E0 /* ImageIO.framework in Frameworks */,
+				A044FBAC1DE0F58A00AC74E0 /* GLKit.framework in Frameworks */,
+				A044FBAA1DE0F58700AC74E0 /* CoreText.framework in Frameworks */,
+				A044FBA81DE0F57F00AC74E0 /* CoreLocation.framework in Frameworks */,
+				A044FBA61DE0F57A00AC74E0 /* CoreGraphics.framework in Frameworks */,
+				A044FBA41DE0F55800AC74E0 /* CoreData.framework in Frameworks */,
+				A044FBA21DE0F54F00AC74E0 /* Accelerate.framework in Frameworks */,
+				A044FB8F1DE0E78800AC74E0 /* GoogleMapsBase.framework in Frameworks */,
+				A044FB891DE0E74100AC74E0 /* GooglePlacePicker.framework in Frameworks */,
+				A044FB951DE0E7AB00AC74E0 /* GoogleMapsCore.framework in Frameworks */,
+				A044FB931DE0E7AB00AC74E0 /* GoogleMaps.framework in Frameworks */,
+				A044FB8C1DE0E76500AC74E0 /* GooglePlaces.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A044FB601DE0D8EA00AC74E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A044FB901DE0E78800AC74E0 /* GoogleMapsBase.framework in Frameworks */,
+				A044FB8A1DE0E74100AC74E0 /* GooglePlacePicker.framework in Frameworks */,
+				A044FB961DE0E7AB00AC74E0 /* GoogleMapsCore.framework in Frameworks */,
+				A044FB941DE0E7AB00AC74E0 /* GoogleMaps.framework in Frameworks */,
+				A044FB8D1DE0E76500AC74E0 /* GooglePlaces.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A044FB6B1DE0D8EA00AC74E0 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		A044FB461DE0D8EA00AC74E0 = {
+			isa = PBXGroup;
+			children = (
+				A044FB511DE0D8EA00AC74E0 /* Desafio */,
+				A044FB661DE0D8EA00AC74E0 /* DesafioTests */,
+				A044FB711DE0D8EA00AC74E0 /* DesafioUITests */,
+				A044FB501DE0D8EA00AC74E0 /* Products */,
+				A044FBA01DE0F54E00AC74E0 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		A044FB501DE0D8EA00AC74E0 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB4F1DE0D8EA00AC74E0 /* Desafio.app */,
+				A044FB631DE0D8EA00AC74E0 /* DesafioTests.xctest */,
+				A044FB6E1DE0D8EA00AC74E0 /* DesafioUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		A044FB511DE0D8EA00AC74E0 /* Desafio */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB831DE0E06000AC74E0 /* Application */,
+				A044FB841DE0E07100AC74E0 /* Views */,
+				A044FB851DE0E08000AC74E0 /* GooglePlaces */,
+				A044FB861DE0E09100AC74E0 /* Support Files */,
+			);
+			path = Desafio;
+			sourceTree = "<group>";
+		};
+		A044FB661DE0D8EA00AC74E0 /* DesafioTests */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB671DE0D8EA00AC74E0 /* DesafioTests.swift */,
+				A044FB691DE0D8EA00AC74E0 /* Info.plist */,
+			);
+			path = DesafioTests;
+			sourceTree = "<group>";
+		};
+		A044FB711DE0D8EA00AC74E0 /* DesafioUITests */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB721DE0D8EA00AC74E0 /* DesafioUITests.swift */,
+				A044FB741DE0D8EA00AC74E0 /* Info.plist */,
+			);
+			path = DesafioUITests;
+			sourceTree = "<group>";
+		};
+		A044FB831DE0E06000AC74E0 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB541DE0D8EA00AC74E0 /* ViewController.swift */,
+			);
+			name = Application;
+			sourceTree = "<group>";
+		};
+		A044FB841DE0E07100AC74E0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		A044FB851DE0E08000AC74E0 /* GooglePlaces */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB801DE0E05B00AC74E0 /* GooglePlacesAPIController.swift */,
+			);
+			name = GooglePlaces;
+			sourceTree = "<group>";
+		};
+		A044FB861DE0E09100AC74E0 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB871DE0E72100AC74E0 /* Framework */,
+				A044FB561DE0D8EA00AC74E0 /* Main.storyboard */,
+				A044FB591DE0D8EA00AC74E0 /* Assets.xcassets */,
+				A044FB5B1DE0D8EA00AC74E0 /* LaunchScreen.storyboard */,
+				A044FB5E1DE0D8EA00AC74E0 /* Info.plist */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		A044FB871DE0E72100AC74E0 /* Framework */ = {
+			isa = PBXGroup;
+			children = (
+				A044FB9D1DE0F51E00AC74E0 /* GoogleMaps.bundle */,
+				A044FB9A1DE0F51400AC74E0 /* GooglePlacePicker.bundle */,
+				A044FB971DE0F4F500AC74E0 /* GooglePlaces.bundle */,
+				A044FB911DE0E7AB00AC74E0 /* GoogleMaps.framework */,
+				A044FB921DE0E7AB00AC74E0 /* GoogleMapsCore.framework */,
+				A044FB8E1DE0E78800AC74E0 /* GoogleMapsBase.framework */,
+				A044FB8B1DE0E76500AC74E0 /* GooglePlaces.framework */,
+				A044FB881DE0E74100AC74E0 /* GooglePlacePicker.framework */,
+			);
+			name = Framework;
+			sourceTree = "<group>";
+		};
+		A044FBA01DE0F54E00AC74E0 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				A044FBB91DE0F5BE00AC74E0 /* UIKit.framework */,
+				A044FBB71DE0F5BA00AC74E0 /* SystemConfiguration.framework */,
+				A044FBB51DE0F5B200AC74E0 /* QuartzCore.framework */,
+				A044FBB31DE0F5AB00AC74E0 /* OpenGLES.framework */,
+				A044FBB11DE0F5A200AC74E0 /* libz.tbd */,
+				A044FBAF1DE0F59D00AC74E0 /* libc++.tbd */,
+				A044FBAD1DE0F59500AC74E0 /* ImageIO.framework */,
+				A044FBAB1DE0F58A00AC74E0 /* GLKit.framework */,
+				A044FBA91DE0F58700AC74E0 /* CoreText.framework */,
+				A044FBA71DE0F57F00AC74E0 /* CoreLocation.framework */,
+				A044FBA51DE0F57A00AC74E0 /* CoreGraphics.framework */,
+				A044FBA31DE0F55800AC74E0 /* CoreData.framework */,
+				A044FBA11DE0F54F00AC74E0 /* Accelerate.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A044FB4E1DE0D8EA00AC74E0 /* Desafio */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A044FB771DE0D8EA00AC74E0 /* Build configuration list for PBXNativeTarget "Desafio" */;
+			buildPhases = (
+				A044FB4B1DE0D8EA00AC74E0 /* Sources */,
+				A044FB4C1DE0D8EA00AC74E0 /* Frameworks */,
+				A044FB4D1DE0D8EA00AC74E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Desafio;
+			productName = Desafio;
+			productReference = A044FB4F1DE0D8EA00AC74E0 /* Desafio.app */;
+			productType = "com.apple.product-type.application";
+		};
+		A044FB621DE0D8EA00AC74E0 /* DesafioTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A044FB7A1DE0D8EA00AC74E0 /* Build configuration list for PBXNativeTarget "DesafioTests" */;
+			buildPhases = (
+				A044FB5F1DE0D8EA00AC74E0 /* Sources */,
+				A044FB601DE0D8EA00AC74E0 /* Frameworks */,
+				A044FB611DE0D8EA00AC74E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A044FB651DE0D8EA00AC74E0 /* PBXTargetDependency */,
+			);
+			name = DesafioTests;
+			productName = DesafioTests;
+			productReference = A044FB631DE0D8EA00AC74E0 /* DesafioTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		A044FB6D1DE0D8EA00AC74E0 /* DesafioUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = A044FB7D1DE0D8EA00AC74E0 /* Build configuration list for PBXNativeTarget "DesafioUITests" */;
+			buildPhases = (
+				A044FB6A1DE0D8EA00AC74E0 /* Sources */,
+				A044FB6B1DE0D8EA00AC74E0 /* Frameworks */,
+				A044FB6C1DE0D8EA00AC74E0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				A044FB701DE0D8EA00AC74E0 /* PBXTargetDependency */,
+			);
+			name = DesafioUITests;
+			productName = DesafioUITests;
+			productReference = A044FB6E1DE0D8EA00AC74E0 /* DesafioUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		A044FB471DE0D8EA00AC74E0 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0810;
+				LastUpgradeCheck = 0810;
+				ORGANIZATIONNAME = "Pedro Lopes";
+				TargetAttributes = {
+					A044FB4E1DE0D8EA00AC74E0 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Y8N79BENX2;
+						ProvisioningStyle = Automatic;
+					};
+					A044FB621DE0D8EA00AC74E0 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Y8N79BENX2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A044FB4E1DE0D8EA00AC74E0;
+					};
+					A044FB6D1DE0D8EA00AC74E0 = {
+						CreatedOnToolsVersion = 8.1;
+						DevelopmentTeam = Y8N79BENX2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = A044FB4E1DE0D8EA00AC74E0;
+					};
+				};
+			};
+			buildConfigurationList = A044FB4A1DE0D8EA00AC74E0 /* Build configuration list for PBXProject "Desafio" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = A044FB461DE0D8EA00AC74E0;
+			productRefGroup = A044FB501DE0D8EA00AC74E0 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A044FB4E1DE0D8EA00AC74E0 /* Desafio */,
+				A044FB621DE0D8EA00AC74E0 /* DesafioTests */,
+				A044FB6D1DE0D8EA00AC74E0 /* DesafioUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		A044FB4D1DE0D8EA00AC74E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A044FB981DE0F4F500AC74E0 /* GooglePlaces.bundle in Resources */,
+				A044FB5D1DE0D8EA00AC74E0 /* LaunchScreen.storyboard in Resources */,
+				A044FB5A1DE0D8EA00AC74E0 /* Assets.xcassets in Resources */,
+				A044FB9E1DE0F51E00AC74E0 /* GoogleMaps.bundle in Resources */,
+				A044FB9B1DE0F51400AC74E0 /* GooglePlacePicker.bundle in Resources */,
+				A044FB581DE0D8EA00AC74E0 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A044FB611DE0D8EA00AC74E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A044FB9F1DE0F51E00AC74E0 /* GoogleMaps.bundle in Resources */,
+				A044FB9C1DE0F51400AC74E0 /* GooglePlacePicker.bundle in Resources */,
+				A044FB991DE0F4F500AC74E0 /* GooglePlaces.bundle in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A044FB6C1DE0D8EA00AC74E0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		A044FB4B1DE0D8EA00AC74E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A044FB551DE0D8EA00AC74E0 /* ViewController.swift in Sources */,
+				A044FB811DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */,
+				A044FB531DE0D8EA00AC74E0 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A044FB5F1DE0D8EA00AC74E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A044FB681DE0D8EA00AC74E0 /* DesafioTests.swift in Sources */,
+				A044FB821DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		A044FB6A1DE0D8EA00AC74E0 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A044FB731DE0D8EA00AC74E0 /* DesafioUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		A044FB651DE0D8EA00AC74E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A044FB4E1DE0D8EA00AC74E0 /* Desafio */;
+			targetProxy = A044FB641DE0D8EA00AC74E0 /* PBXContainerItemProxy */;
+		};
+		A044FB701DE0D8EA00AC74E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = A044FB4E1DE0D8EA00AC74E0 /* Desafio */;
+			targetProxy = A044FB6F1DE0D8EA00AC74E0 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		A044FB561DE0D8EA00AC74E0 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A044FB571DE0D8EA00AC74E0 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		A044FB5B1DE0D8EA00AC74E0 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				A044FB5C1DE0D8EA00AC74E0 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		A044FB751DE0D8EA00AC74E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		A044FB761DE0D8EA00AC74E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVES = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "-ObjC";
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		A044FB781DE0D8EA00AC74E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y8N79BENX2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Desafio",
+				);
+				INFOPLIST_FILE = Desafio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PedroLopes.Desafio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		A044FB791DE0D8EA00AC74E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = Y8N79BENX2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Desafio",
+				);
+				INFOPLIST_FILE = Desafio/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.PedroLopes.Desafio;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		A044FB7B1DE0D8EA00AC74E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y8N79BENX2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Desafio",
+				);
+				INFOPLIST_FILE = DesafioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Pedro-Lopes.DesafioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio.app/Desafio";
+			};
+			name = Debug;
+		};
+		A044FB7C1DE0D8EA00AC74E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = Y8N79BENX2;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Desafio",
+				);
+				INFOPLIST_FILE = DesafioTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Pedro-Lopes.DesafioTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Desafio.app/Desafio";
+			};
+			name = Release;
+		};
+		A044FB7E1DE0D8EA00AC74E0 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Y8N79BENX2;
+				INFOPLIST_FILE = DesafioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Pedro-Lopes.DesafioUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Desafio;
+			};
+			name = Debug;
+		};
+		A044FB7F1DE0D8EA00AC74E0 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				DEVELOPMENT_TEAM = Y8N79BENX2;
+				INFOPLIST_FILE = DesafioUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "Pedro-Lopes.DesafioUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = Desafio;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		A044FB4A1DE0D8EA00AC74E0 /* Build configuration list for PBXProject "Desafio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A044FB751DE0D8EA00AC74E0 /* Debug */,
+				A044FB761DE0D8EA00AC74E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		A044FB771DE0D8EA00AC74E0 /* Build configuration list for PBXNativeTarget "Desafio" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A044FB781DE0D8EA00AC74E0 /* Debug */,
+				A044FB791DE0D8EA00AC74E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A044FB7A1DE0D8EA00AC74E0 /* Build configuration list for PBXNativeTarget "DesafioTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A044FB7B1DE0D8EA00AC74E0 /* Debug */,
+				A044FB7C1DE0D8EA00AC74E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		A044FB7D1DE0D8EA00AC74E0 /* Build configuration list for PBXNativeTarget "DesafioUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				A044FB7E1DE0D8EA00AC74E0 /* Debug */,
+				A044FB7F1DE0D8EA00AC74E0 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = A044FB471DE0D8EA00AC74E0 /* Project object */;
+}
