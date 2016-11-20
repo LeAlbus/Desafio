@@ -2,7 +2,7 @@
 
 ##OverView
 This project is a simply "Garage Finder" for iPhone devices.
-The app should access your location andshow the garages nearby. 
+The app should access your location and show the garages nearby. 
 Also, the app should allow you to access each of the listed garages for more information about them.
 
 ###Install/Test
