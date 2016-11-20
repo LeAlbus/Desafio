@@ -42,7 +42,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         //Request nearby garages
         let rawJson = self.GooglePlacesManager.requestForLocation(latitude: latitude!, longitude: longitude!)
-        self.jsonParser.readPlaces(json: rawJson)
+        print(self.jsonParser.readPlaces(json: rawJson))
     }
     
     

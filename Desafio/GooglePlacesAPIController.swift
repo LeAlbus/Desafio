@@ -13,7 +13,7 @@ class GooglePlacesAPIController: NSObject{
     
     var baseRequestURL: String = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
     let requestType: String = "&type=car_repair" //Type of location to search for
-    let rangeToSearch: String = "&radius=100" //Defines distance in meters to search in
+    let rangeToSearch: String = "&radius=1000" //Defines distance in meters to search in
     
     
     func requestForLocation(latitude: CLLocationDegrees, longitude: CLLocationDegrees) -> JSON{
