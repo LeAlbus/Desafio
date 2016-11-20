@@ -4,6 +4,13 @@
 <dict>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>This app needs to access your location in order to find garages nearby</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>This app wants to access your location while in background</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>location-services</string>
+		<string>gps</string>
+	</array>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>en</string>
 	<key>CFBundleDisplayName</key>
@@ -28,10 +35,6 @@
 	<string>LaunchScreen</string>
 	<key>UIMainStoryboardFile</key>
 	<string>Main</string>
-	<key>UIRequiredDeviceCapabilities</key>
-	<array>
-		<string>armv7</string>
-	</array>
 	<key>UISupportedInterfaceOrientations</key>
 	<array>
 		<string>UIInterfaceOrientationPortrait</string>

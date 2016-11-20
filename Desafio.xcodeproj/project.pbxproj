@@ -203,7 +203,7 @@
 		A044FB831DE0E06000AC74E0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
-				A044FB541DE0D8EA00AC74E0 /* ViewController.swift */,
+				A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -211,7 +211,7 @@
 		A044FB841DE0E07100AC74E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */,
+				A044FB541DE0D8EA00AC74E0 /* ViewController.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -575,6 +575,7 @@
 					"$(PROJECT_DIR)/Desafio",
 				);
 				INFOPLIST_FILE = Desafio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PedroLopes.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -592,6 +593,7 @@
 					"$(PROJECT_DIR)/Desafio",
 				);
 				INFOPLIST_FILE = Desafio/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.PedroLopes.Desafio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
