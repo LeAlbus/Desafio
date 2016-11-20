@@ -45,6 +45,9 @@
 		A044FBB61DE0F5B200AC74E0 /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBB51DE0F5B200AC74E0 /* QuartzCore.framework */; };
 		A044FBB81DE0F5BA00AC74E0 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBB71DE0F5BA00AC74E0 /* SystemConfiguration.framework */; };
 		A044FBBA1DE0F5BE00AC74E0 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A044FBB91DE0F5BE00AC74E0 /* UIKit.framework */; };
+		A08BF2681DE15E0C00DB1B24 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */; };
+		A08BF26A1DE15FE300DB1B24 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2691DE15FE300DB1B24 /* JSONParser.swift */; };
+		A08BF26B1DE15FE300DB1B24 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2691DE15FE300DB1B24 /* JSONParser.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -100,6 +103,8 @@
 		A044FBB51DE0F5B200AC74E0 /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
 		A044FBB71DE0F5BA00AC74E0 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
 		A044FBB91DE0F5BE00AC74E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		A08BF2691DE15FE300DB1B24 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,6 +209,7 @@
 			isa = PBXGroup;
 			children = (
 				A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */,
+				A08BF2691DE15FE300DB1B24 /* JSONParser.swift */,
 			);
 			name = Application;
 			sourceTree = "<group>";
@@ -227,6 +233,7 @@
 		A044FB861DE0E09100AC74E0 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */,
 				A044FB871DE0E72100AC74E0 /* Framework */,
 				A044FB561DE0D8EA00AC74E0 /* Main.storyboard */,
 				A044FB591DE0D8EA00AC74E0 /* Assets.xcassets */,
@@ -415,8 +422,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				A044FB551DE0D8EA00AC74E0 /* ViewController.swift in Sources */,
+				A08BF26A1DE15FE300DB1B24 /* JSONParser.swift in Sources */,
 				A044FB811DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */,
 				A044FB531DE0D8EA00AC74E0 /* AppDelegate.swift in Sources */,
+				A08BF2681DE15E0C00DB1B24 /* SwiftyJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -426,6 +435,7 @@
 			files = (
 				A044FB681DE0D8EA00AC74E0 /* DesafioTests.swift in Sources */,
 				A044FB821DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */,
+				A08BF26B1DE15FE300DB1B24 /* JSONParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -686,6 +696,7 @@
 				A044FB791DE0D8EA00AC74E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A044FB7A1DE0D8EA00AC74E0 /* Build configuration list for PBXNativeTarget "DesafioTests" */ = {
 			isa = XCConfigurationList;
@@ -694,6 +705,7 @@
 				A044FB7C1DE0D8EA00AC74E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A044FB7D1DE0D8EA00AC74E0 /* Build configuration list for PBXNativeTarget "DesafioUITests" */ = {
 			isa = XCConfigurationList;
@@ -702,6 +714,7 @@
 				A044FB7F1DE0D8EA00AC74E0 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

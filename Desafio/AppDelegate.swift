@@ -9,6 +9,10 @@
 import UIKit
 import GooglePlaces
 
+struct Constants {
+    static let WEB_SERVICE_KEY : String = "AIzaSyCn0IyB6M_vwjy9fp_6ZPKqPR4mWWSe3ro"
+}
+
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 

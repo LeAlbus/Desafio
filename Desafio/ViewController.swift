@@ -8,34 +8,41 @@
 
 import UIKit
 import CoreLocation
-import GooglePlaces
-import GooglePlacePicker
+//import GooglePlaces
+//import GooglePlacePicker
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager: CLLocationManager!
     var currentUserLocation: CLLocation?
     
-    var placesClient: GMSPlacesClient?
-    var placePicker: GMSPlacePicker?
+    let GooglePlacesManager = GooglePlacesAPIController()
+    
+    //var placesClient: GMSPlacesClient?
+    //var placePicker: GMSPlacePicker?
 
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        placesClient = GMSPlacesClient.shared()
+       // placesClient = GMSPlacesClient.shared()
         
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
     }
     
-    func findCurrentUserPlace() -> CLLocation{
+    func runSearch(){
         
-        print("Requesting user location")
+        //setting user location
+        currentUserLocation = locationManager.location!
         
-        return locationManager.location!
+        let latitude = currentUserLocation?.coordinate.latitude
+        let longitude = currentUserLocation?.coordinate.longitude
         
+        //Request nearby garages
+        self.GooglePlacesManager.requestForLocation(latitude: latitude!, longitude: longitude!)
     }
+    
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
         //This function is called whenever the app's access to location services is changes
@@ -47,7 +54,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
             
             print("User has allowed the app's access to location services")
             
-            self.currentUserLocation = self.findCurrentUserPlace()
+            self.runSearch()
 
         case CLAuthorizationStatus.denied:
             
