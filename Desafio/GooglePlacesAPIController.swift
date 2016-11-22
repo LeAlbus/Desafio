@@ -11,6 +11,10 @@ import CoreLocation
 
 class GooglePlacesAPIController: NSObject{
     
+    //Singleton
+    static let sharedInstance = GooglePlacesAPIController()
+
+    
     var baseRequestURL: String = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?"
     let requestType: String = "&type=car_repair" //Type of location to search for
     let rangeToSearch: String = "&radius=1000" //Defines distance in meters to search in
@@ -42,16 +46,26 @@ class GooglePlacesAPIController: NSObject{
         return requestStringWithAPIKey
     }
     
+    func readNewPageWith(token: String) -> JSON{
+        
+        let newPageURL: String = baseRequestURL + "pagetoken=" + token
+        let newPageURLWithKey: String = newPageURL + "&key=" + Constants.WEB_SERVICE_KEY
+        
+        return self.makeRequest(StringUrl: newPageURLWithKey)
+    }
+    
     func makeRequest(StringUrl: String) -> JSON{
         
         var json: JSON!
         let urlToRequest: URL = URL(string: StringUrl)!
-        
+        //print(urlToRequest)
         var requestComplete: Bool = false
         
         let urlRequest: URLRequest = URLRequest(url: urlToRequest)
         let session = URLSession.shared
         
+ 
+    
         //MARK: Asynchronous request
         let task = session.dataTask(with: urlRequest) {
             (data, response, error) -> Void in
@@ -60,7 +74,7 @@ class GooglePlacesAPIController: NSObject{
             let statusCode = httpResponse.statusCode
             
             if (statusCode == 200) {
-                print("Everyone is fine, file downloaded successfully.")
+                print("File downloaded successfully.")
                 json = JSON(data: data! as Data)
                 requestComplete = true
             }
@@ -68,10 +82,20 @@ class GooglePlacesAPIController: NSObject{
         
         task.resume()
         
-        //check if request was already answered
+        
         while(!requestComplete){
+
+            /*
+             * Check if request was already answered
+             *
+             * This block is necessary due to the delay for the Google Places API
+             * to generate the pages following the first one,
+             * if there are more then 20 results
+             */
+            
             sleep(UInt32(0.3))
         }
+        
         return json
 
     }

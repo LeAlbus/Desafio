@@ -10,15 +10,14 @@ import Foundation
 
 class JSONParser: NSObject{
     
-    var places = [[String: AnyObject]]()
+    //Singleton
+    static let sharedInstance = JSONParser()
     
     func readPlaces(json: JSON) -> [[String: AnyObject]]{
-       // print(json)
-        if json["status"].stringValue == "OK"{
         
-            if json["next_page_token"].exists(){
-                //print(json["next_page_token"])
-            }
+        var places = [[String: AnyObject]]()
+        
+        if json["status"].stringValue == "OK"{
             
             for result in json["results"].arrayValue{
 
@@ -34,7 +33,18 @@ class JSONParser: NSObject{
                 places.append(place)
             }
             
-            //TODO: Check other pages
+            //MARK: Appending next pages, if there are more then 20 results
+            
+            if json["next_page_token"].exists(){
+                
+                let nextPageToken = json["next_page_token"].stringValue
+                
+                let newJSON: JSON = GooglePlacesAPIController.sharedInstance.readNewPageWith(token: nextPageToken)
+                
+                let nextPage: [[String: AnyObject]] = self.readPlaces(json: newJSON)
+                
+                places.append(contentsOf: nextPage)
+            }
             
             return places
 

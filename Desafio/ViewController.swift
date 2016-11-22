@@ -15,13 +15,6 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     
     var locationManager: CLLocationManager!
     var currentUserLocation: CLLocation?
-    
-    let GooglePlacesManager = GooglePlacesAPIController()
-    let jsonParser = JSONParser()
-    
-    //var placesClient: GMSPlacesClient?
-    //var placePicker: GMSPlacePicker?
-
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,8 +34,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         let longitude = currentUserLocation?.coordinate.longitude
         
         //Request nearby garages
-        let rawJson = self.GooglePlacesManager.requestForLocation(latitude: latitude!, longitude: longitude!)
-        print(self.jsonParser.readPlaces(json: rawJson))
+        let rawJson = GooglePlacesAPIController.sharedInstance.requestForLocation(latitude: latitude!, longitude: longitude!)
+        print("CALL")
+        print(JSONParser.sharedInstance.readPlaces(json: rawJson).count)
     }
     
     
