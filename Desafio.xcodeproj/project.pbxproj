@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40107FEF1DE4C125008763F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB541DE0D8EA00AC74E0 /* ViewController.swift */; };
+		40A7EF121DE4BB2B009A3D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */; };
+		40A7EF131DE4BB96009A3D75 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */; };
 		A044FB531DE0D8EA00AC74E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */; };
 		A044FB551DE0D8EA00AC74E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB541DE0D8EA00AC74E0 /* ViewController.swift */; };
 		A044FB581DE0D8EA00AC74E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A044FB561DE0D8EA00AC74E0 /* Main.storyboard */; };
@@ -433,8 +436,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				40107FEF1DE4C125008763F6 /* ViewController.swift in Sources */,
+				40A7EF121DE4BB2B009A3D75 /* AppDelegate.swift in Sources */,
 				A044FB681DE0D8EA00AC74E0 /* DesafioTests.swift in Sources */,
 				A044FB821DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */,
+				40A7EF131DE4BB96009A3D75 /* SwiftyJSON.swift in Sources */,
 				A08BF26B1DE15FE300DB1B24 /* JSONParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

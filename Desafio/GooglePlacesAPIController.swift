@@ -47,8 +47,30 @@ class GooglePlacesAPIController: NSObject{
         var json: JSON!
         let urlToRequest: URL = URL(string: StringUrl)!
         
-        if let data = try? NSData(contentsOf: urlToRequest, options: []) {
-            json = JSON(data: data as Data)
+        var requestComplete: Bool = false
+        
+        let urlRequest: URLRequest = URLRequest(url: urlToRequest)
+        let session = URLSession.shared
+        
+        //MARK: Asynchronous request
+        let task = session.dataTask(with: urlRequest) {
+            (data, response, error) -> Void in
+            
+            let httpResponse = response as! HTTPURLResponse
+            let statusCode = httpResponse.statusCode
+            
+            if (statusCode == 200) {
+                print("Everyone is fine, file downloaded successfully.")
+                json = JSON(data: data! as Data)
+                requestComplete = true
+            }
+        }
+        
+        task.resume()
+        
+        //check if request was already answered
+        while(!requestComplete){
+            sleep(UInt32(0.3))
         }
         return json
 

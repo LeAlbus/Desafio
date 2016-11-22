@@ -155,9 +155,9 @@ public struct JSON {
             case  let string as String:
                 _type = .string
                 self.rawString = string
-            case  _ as NSNull:
+            case _ as NSNull:
                 _type = .null
-            case let array as [JSON]:
+            case _ as [JSON]:
                 _type = .array
             case nil:
                 _type = .null
