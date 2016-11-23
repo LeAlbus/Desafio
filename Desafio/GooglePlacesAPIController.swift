@@ -47,6 +47,7 @@ class GooglePlacesAPIController: NSObject{
     }
     
     func readNewPageWith(token: String) -> JSON{
+        //Function called to read a new page when there are more than 20 results
         
         let newPageURL: String = baseRequestURL + "pagetoken=" + token
         let newPageURLWithKey: String = newPageURL + "&key=" + Constants.WEB_SERVICE_KEY
@@ -85,6 +86,7 @@ class GooglePlacesAPIController: NSObject{
         
         while(!requestComplete){
 
+            
             /*
              * Check if request was already answered
              *
