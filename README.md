@@ -15,3 +15,7 @@ In order to install and/or test the application:
 
 - [Google Maps API](https://goo.gl/NHOUi3)
 - [Google Places API](https://goo.gl/hDsnZ9)
+
+###Custom frameworks
+
+- [SwiftyJSON](https://github.com/SwiftyJSON/SwiftyJSON)
