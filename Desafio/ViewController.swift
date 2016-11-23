@@ -11,7 +11,12 @@ import CoreLocation
 //import GooglePlaces
 //import GooglePlacePicker
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
+class ViewController: UITableViewController, CLLocationManagerDelegate {
+ 
+    @IBOutlet var placesList: UITableView!
+    @IBOutlet var refreshButton: UIButton!
+    
+    var places = [[String: AnyObject]]()
     
     var locationManager: CLLocationManager!
     var currentUserLocation: CLLocation?
@@ -23,20 +28,30 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
+        tableView.register(PlaceCell.classForCoder(), forCellReuseIdentifier: "placeCell")
+
     }
     
     func runSearch(){
         
         //setting user location
-        currentUserLocation = locationManager.location!
+        currentUserLocation = self.locationManager.location!
         
         let latitude = currentUserLocation?.coordinate.latitude
         let longitude = currentUserLocation?.coordinate.longitude
         
         //Request nearby garages
         let rawJson = GooglePlacesAPIController.sharedInstance.requestForLocation(latitude: latitude!, longitude: longitude!)
-        print("CALL")
-        print(JSONParser.sharedInstance.readPlaces(json: rawJson).count)
+        
+        places = JSONParser.sharedInstance.readPlaces(json: rawJson)
+        
+        if places.isEmpty{
+            
+        } else{
+            print("RELOADING")
+            self.tableView.reloadData()
+        }
+        
     }
     
     
@@ -89,7 +104,24 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         }
      }
     
+    //MARK: TableViewController related functions 
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
     
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        print(places.count)
+        return places.count
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> PlaceCell {
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath ) as! PlaceCell
+        print(places[indexPath.row])
+        cell.setBaseValues(placeInfo: places[indexPath.row])
+        return cell
+    }
+
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
