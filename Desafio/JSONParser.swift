@@ -24,11 +24,11 @@ class JSONParser: NSObject{
                 //Filreting for usefull informations
                 var place = [String: AnyObject]()
 
-                place["name"] = result["name"] as AnyObject?
-                place["icon"] = result["icon"] as AnyObject?
+                place["name"] = result["name"].stringValue as AnyObject?
+                place["icon"] = result["icon"].stringValue as AnyObject?
                 //MARK: Not all the results show the open now information. Check for null result
-                place["open_now"] = result["opening_hours"]["open_now"] as AnyObject?
-                place["vicinity"] = result["vicinity"] as AnyObject?
+                place["open_now"] = result["opening_hours"]["open_now"].stringValue as AnyObject?
+                place["vicinity"] = result["vicinity"].stringValue as AnyObject?
 
                 places.append(place)
             }

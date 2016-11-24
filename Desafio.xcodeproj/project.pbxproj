@@ -56,6 +56,7 @@
 		A08BF2681DE15E0C00DB1B24 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */; };
 		A08BF26A1DE15FE300DB1B24 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2691DE15FE300DB1B24 /* JSONParser.swift */; };
 		A08BF26B1DE15FE300DB1B24 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2691DE15FE300DB1B24 /* JSONParser.swift */; };
+		A08BF2721DE6A20800DB1B24 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB30D1DE606DC00CC7974 /* PlacesList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -171,7 +172,6 @@
 			children = (
 				40FFB3071DE5CE7C00CC7974 /* PlaceCell.swift */,
 				40FFB30A1DE5D38600CC7974 /* imageViewExtension.swift */,
-				40FFB30D1DE606DC00CC7974 /* PlacesList.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -239,6 +239,7 @@
 		A044FB841DE0E07100AC74E0 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				40FFB30D1DE606DC00CC7974 /* PlacesList.swift */,
 				A044FB541DE0D8EA00AC74E0 /* ViewController.swift */,
 			);
 			name = Views;
@@ -459,6 +460,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				40107FEF1DE4C125008763F6 /* ViewController.swift in Sources */,
+				A08BF2721DE6A20800DB1B24 /* PlacesList.swift in Sources */,
 				40FFB3091DE5CEC000CC7974 /* PlaceCell.swift in Sources */,
 				40A7EF121DE4BB2B009A3D75 /* AppDelegate.swift in Sources */,
 				A044FB681DE0D8EA00AC74E0 /* DesafioTests.swift in Sources */,

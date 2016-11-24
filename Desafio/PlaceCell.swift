@@ -11,7 +11,7 @@ import UIKit
 
 class PlaceCell: UITableViewCell{
    
-    @IBOutlet var adressLabel: UILabel!
+    //@IBOutlet var adressLabel: UILabel!
     @IBOutlet var nameLabel: UILabel!
     @IBOutlet var icon: UIImageView!
     
@@ -24,18 +24,33 @@ class PlaceCell: UITableViewCell{
         
         //FIXME: Convert values to String
         
-        name = placeInfo["name"] as! String
-        adress = placeInfo["vicinity"] as! String
-        imageURL = placeInfo["icon"] as! String
-        nameLabel.text = name
-        adressLabel.text = adress
+        print(placeInfo["name"] as! String)
         
-        icon.downloadedFrom(link: imageURL)
+        self.name = placeInfo["name"] as! String
+        self.adress = placeInfo["vicinity"] as! String
+        self.imageURL = placeInfo["icon"] as! String
+        
+        self.nameLabel = UILabel()
+       // self.adressLabel = UILabel()
+        
+        self.nameLabel.text = self.name
+        //self.adressLabel.text = self.adress
+        
+        self.icon = UIImageView()
+       // icon.downloadedFrom(link: imageURL)
+        self.contentView.sizeToFit()
+        self.sizeToFit()
         
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        if self.name != nil{
+            print(self.nameLabel.text)
+        }
+        
+        //print("ALALA")
     }
 }
 

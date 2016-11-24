@@ -11,10 +11,13 @@ import CoreLocation
 //import GooglePlaces
 //import GooglePlacePicker
 
-class ViewController: UITableViewController, CLLocationManagerDelegate {
+class ViewController: UIViewController, CLLocationManagerDelegate {
  
-    @IBOutlet var placesList: UITableView!
+    @IBOutlet weak var placesContainerView: UIView!
+    @IBOutlet weak var holdView: UIView!
     @IBOutlet var refreshButton: UIButton!
+    
+    var placesListView: PlacesListDelegate!
     
     var places = [[String: AnyObject]]()
     
@@ -23,12 +26,9 @@ class ViewController: UITableViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-       // placesClient = GMSPlacesClient.shared()
         
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
-        tableView.register(PlaceCell.classForCoder(), forCellReuseIdentifier: "placeCell")
 
     }
     
@@ -49,11 +49,27 @@ class ViewController: UITableViewController, CLLocationManagerDelegate {
             
         } else{
             print("RELOADING")
-            self.tableView.reloadData()
+            DispatchQueue.main.async {
+                 () -> Void in
+                
+               // self.tableView.reloadData()
+            
+            self.placesListView.setBaseValues(placesData: self.places)
+            self.placesListView.tableView.reloadData()
+            }
         }
         
     }
     
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Called before ViewDidLoad
+        
+        if let vc = segue.destination as? PlacesListDelegate, segue.identifier == "PlacesListSegue" {
+            
+            self.placesListView = vc
+        }
+    }
     
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
         //This function is called whenever the app's access to location services is changes
@@ -104,24 +120,24 @@ class ViewController: UITableViewController, CLLocationManagerDelegate {
         }
      }
     
-    //MARK: TableViewController related functions 
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        print(places.count)
-        return places.count
-    }
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> PlaceCell {
-        
-        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath ) as! PlaceCell
-        print(places[indexPath.row])
-        cell.setBaseValues(placeInfo: places[indexPath.row])
-        return cell
-    }
-
+//    //MARK: TableViewController related functions 
+//    override func numberOfSections(in tableView: UITableView) -> Int {
+//        return 1
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+//        print(places.count)
+//        return places.count
+//    }
+//    
+//    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> PlaceCell {
+//        
+//        let cell = tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath ) as! PlaceCell
+//        print(places[indexPath.row])
+//        cell.setBaseValues(placeInfo: places[indexPath.row])
+//        return cell
+//    }
+//
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         
