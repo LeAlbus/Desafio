@@ -1,67 +1,36 @@
-//
-//  placesList.swift
-//  Desafio
-//
-//  Created by Pedro Lopes on 11/23/16.
-//  Copyright © 2016 Pedro Lopes. All rights reserved.
+////
+////  placesList.swift
+////  Desafio
+////
+////  Created by Pedro Lopes on 11/23/16.
+////  Copyright © 2016 Pedro Lopes. All rights reserved.
 //
 
 import Foundation
 import UIKit
-//FIXME: cell not changing name label text, but shows right when print
 
-class PlacesListDelegate: UIViewController, UITableViewDelegate, UITableViewDataSource{
+class PlacesListDelegate: UIViewController{
     
-
-    @IBOutlet var tableView: UITableView!
-
-    var places = [[String: AnyObject]]()
-
-    func setBaseValues(placesData: [[String: AnyObject]]){
-        
-        
-        places = placesData
-    }
     
+    var dataSource: PlaceCellDataSource?
+
+    @IBOutlet weak var tableView: UITableView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        //Registering the PlaceCell as the usable cell for the identifier "placeCell"
-        //MARK: adding this line hides the content of the cells
-        //tableView.register(PlaceCell.classForCoder(), forCellReuseIdentifier: "placeCell")
         
-        tableView.delegate = self
-        tableView.dataSource = self
+//        tableView.estimatedRowHeight = 60
+//        tableView.rowHeight = UITableViewAutomaticDimension
+//        tableView.dataSource = dataSource as! UITableViewDataSource?
+//        tableView.reloadData()
     }
     
-    //MARK: TableViewController related functions
-     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+    func initDataSource(places: [[String: AnyObject]]){
         
-        return places.count
-    }
-    
-     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        self.dataSource = PlaceCellDataSource(places: places)
         
-        var cell = self.tableView.dequeueReusableCell(withIdentifier: "placeCell", for: indexPath ) as! PlaceCell
-        if cell == nil {
-            cell = PlaceCell(style: UITableViewCellStyle.default, reuseIdentifier: "placeCell")
-        }
-        print(places[indexPath.row])
-        cell.setBaseValues(placeInfo: places[indexPath.row])
-        cell.nameLabel.text = " ahahaha"
-        cell.reloadInputViews()
-        
-
-        return cell
+        tableView.estimatedRowHeight = 60
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.dataSource = dataSource as! UITableViewDataSource?
+        tableView.reloadData()
     }
-    
-    // method to run when table view cell is tapped
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        print("You tapped cell number \(indexPath.row).")
-    }
-    
-
 }

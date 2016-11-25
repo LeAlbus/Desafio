@@ -10,8 +10,6 @@
 		40107FEF1DE4C125008763F6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB541DE0D8EA00AC74E0 /* ViewController.swift */; };
 		40A7EF121DE4BB2B009A3D75 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */; };
 		40A7EF131DE4BB96009A3D75 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */; };
-		40FFB3081DE5CE7C00CC7974 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB3071DE5CE7C00CC7974 /* PlaceCell.swift */; };
-		40FFB3091DE5CEC000CC7974 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB3071DE5CE7C00CC7974 /* PlaceCell.swift */; };
 		40FFB30B1DE5D38600CC7974 /* imageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB30A1DE5D38600CC7974 /* imageViewExtension.swift */; };
 		40FFB30C1DE5D38900CC7974 /* imageViewExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB30A1DE5D38600CC7974 /* imageViewExtension.swift */; };
 		40FFB30E1DE606DC00CC7974 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB30D1DE606DC00CC7974 /* PlacesList.swift */; };
@@ -57,6 +55,16 @@
 		A08BF26A1DE15FE300DB1B24 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2691DE15FE300DB1B24 /* JSONParser.swift */; };
 		A08BF26B1DE15FE300DB1B24 /* JSONParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2691DE15FE300DB1B24 /* JSONParser.swift */; };
 		A08BF2721DE6A20800DB1B24 /* PlacesList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 40FFB30D1DE606DC00CC7974 /* PlacesList.swift */; };
+		A08BF2771DE7C82300DB1B24 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2761DE7C82300DB1B24 /* PlaceView.swift */; };
+		A08BF2781DE7C82300DB1B24 /* PlaceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2761DE7C82300DB1B24 /* PlaceView.swift */; };
+		A08BF27A1DE7CBD400DB1B24 /* PlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2791DE7CBD400DB1B24 /* PlacesListViewController.swift */; };
+		A08BF27B1DE7CBD400DB1B24 /* PlacesListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2791DE7CBD400DB1B24 /* PlacesListViewController.swift */; };
+		A08BF27D1DE7CF5100DB1B24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF27C1DE7CF5100DB1B24 /* ContentView.swift */; };
+		A08BF27E1DE7CF5100DB1B24 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF27C1DE7CF5100DB1B24 /* ContentView.swift */; };
+		A08BF2801DE7D71C00DB1B24 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF27F1DE7D71C00DB1B24 /* PlaceCell.swift */; };
+		A08BF2811DE7D71C00DB1B24 /* PlaceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF27F1DE7D71C00DB1B24 /* PlaceCell.swift */; };
+		A08BF2831DE7D9B300DB1B24 /* PlaceCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2821DE7D9B300DB1B24 /* PlaceCellDataSource.swift */; };
+		A08BF2841DE7D9B300DB1B24 /* PlaceCellDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08BF2821DE7D9B300DB1B24 /* PlaceCellDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,7 +85,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		40FFB3071DE5CE7C00CC7974 /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
 		40FFB30A1DE5D38600CC7974 /* imageViewExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = imageViewExtension.swift; sourceTree = "<group>"; };
 		40FFB30D1DE606DC00CC7974 /* PlacesList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesList.swift; sourceTree = "<group>"; };
 		A044FB4F1DE0D8EA00AC74E0 /* Desafio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Desafio.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -117,6 +124,11 @@
 		A044FBB91DE0F5BE00AC74E0 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		A08BF2691DE15FE300DB1B24 /* JSONParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParser.swift; sourceTree = "<group>"; };
+		A08BF2761DE7C82300DB1B24 /* PlaceView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceView.swift; sourceTree = "<group>"; };
+		A08BF2791DE7CBD400DB1B24 /* PlacesListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlacesListViewController.swift; sourceTree = "<group>"; };
+		A08BF27C1DE7CF5100DB1B24 /* ContentView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		A08BF27F1DE7D71C00DB1B24 /* PlaceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCell.swift; sourceTree = "<group>"; };
+		A08BF2821DE7D9B300DB1B24 /* PlaceCellDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PlaceCellDataSource.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -170,8 +182,12 @@
 		40FFB3061DE5CE6F00CC7974 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				40FFB3071DE5CE7C00CC7974 /* PlaceCell.swift */,
+				A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */,
 				40FFB30A1DE5D38600CC7974 /* imageViewExtension.swift */,
+				A08BF2761DE7C82300DB1B24 /* PlaceView.swift */,
+				A08BF27C1DE7CF5100DB1B24 /* ContentView.swift */,
+				A08BF27F1DE7D71C00DB1B24 /* PlaceCell.swift */,
+				A08BF2821DE7D9B300DB1B24 /* PlaceCellDataSource.swift */,
 			);
 			name = Objects;
 			sourceTree = "<group>";
@@ -202,7 +218,7 @@
 			children = (
 				40FFB3061DE5CE6F00CC7974 /* Objects */,
 				A044FB831DE0E06000AC74E0 /* Application */,
-				A044FB841DE0E07100AC74E0 /* Views */,
+				A044FB841DE0E07100AC74E0 /* ViewController */,
 				A044FB851DE0E08000AC74E0 /* GooglePlaces */,
 				A044FB861DE0E09100AC74E0 /* Support Files */,
 			);
@@ -236,13 +252,14 @@
 			name = Application;
 			sourceTree = "<group>";
 		};
-		A044FB841DE0E07100AC74E0 /* Views */ = {
+		A044FB841DE0E07100AC74E0 /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
 				40FFB30D1DE606DC00CC7974 /* PlacesList.swift */,
 				A044FB541DE0D8EA00AC74E0 /* ViewController.swift */,
+				A08BF2791DE7CBD400DB1B24 /* PlacesListViewController.swift */,
 			);
-			name = Views;
+			name = ViewController;
 			sourceTree = "<group>";
 		};
 		A044FB851DE0E08000AC74E0 /* GooglePlaces */ = {
@@ -268,7 +285,6 @@
 		A044FB871DE0E72100AC74E0 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
-				A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */,
 				A044FB9D1DE0F51E00AC74E0 /* GoogleMaps.bundle */,
 				A044FB9A1DE0F51400AC74E0 /* GooglePlacePicker.bundle */,
 				A044FB971DE0F4F500AC74E0 /* GooglePlaces.bundle */,
@@ -444,11 +460,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A08BF2831DE7D9B300DB1B24 /* PlaceCellDataSource.swift in Sources */,
 				A044FB551DE0D8EA00AC74E0 /* ViewController.swift in Sources */,
-				40FFB3081DE5CE7C00CC7974 /* PlaceCell.swift in Sources */,
 				A08BF26A1DE15FE300DB1B24 /* JSONParser.swift in Sources */,
+				A08BF2771DE7C82300DB1B24 /* PlaceView.swift in Sources */,
 				40FFB30B1DE5D38600CC7974 /* imageViewExtension.swift in Sources */,
+				A08BF27A1DE7CBD400DB1B24 /* PlacesListViewController.swift in Sources */,
 				A044FB811DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */,
+				A08BF2801DE7D71C00DB1B24 /* PlaceCell.swift in Sources */,
+				A08BF27D1DE7CF5100DB1B24 /* ContentView.swift in Sources */,
 				A044FB531DE0D8EA00AC74E0 /* AppDelegate.swift in Sources */,
 				A08BF2681DE15E0C00DB1B24 /* SwiftyJSON.swift in Sources */,
 				40FFB30E1DE606DC00CC7974 /* PlacesList.swift in Sources */,
@@ -460,14 +480,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				40107FEF1DE4C125008763F6 /* ViewController.swift in Sources */,
+				A08BF27E1DE7CF5100DB1B24 /* ContentView.swift in Sources */,
 				A08BF2721DE6A20800DB1B24 /* PlacesList.swift in Sources */,
-				40FFB3091DE5CEC000CC7974 /* PlaceCell.swift in Sources */,
+				A08BF2781DE7C82300DB1B24 /* PlaceView.swift in Sources */,
 				40A7EF121DE4BB2B009A3D75 /* AppDelegate.swift in Sources */,
 				A044FB681DE0D8EA00AC74E0 /* DesafioTests.swift in Sources */,
 				A044FB821DE0E05B00AC74E0 /* GooglePlacesAPIController.swift in Sources */,
 				40A7EF131DE4BB96009A3D75 /* SwiftyJSON.swift in Sources */,
 				40FFB30C1DE5D38900CC7974 /* imageViewExtension.swift in Sources */,
+				A08BF27B1DE7CBD400DB1B24 /* PlacesListViewController.swift in Sources */,
+				A08BF2841DE7D9B300DB1B24 /* PlaceCellDataSource.swift in Sources */,
 				A08BF26B1DE15FE300DB1B24 /* JSONParser.swift in Sources */,
+				A08BF2811DE7D71C00DB1B24 /* PlaceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
