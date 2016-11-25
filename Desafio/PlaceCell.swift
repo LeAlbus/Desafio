@@ -21,4 +21,9 @@ class PlaceCell: UITableViewCell{
             iconView.downloadedFrom(link: (placeInfo?["icon"] as! String))
         }
     }
+    
+    func presentInformation(){
+        
+        
+    }
 }

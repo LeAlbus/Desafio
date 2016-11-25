@@ -26,4 +26,11 @@ class PlaceCellDataSource: NSObject, UITableViewDataSource {
         cell.placeInfo = place
         return cell
     }
+    
+    func showInfo() {
+        let modalViewController = PlaceInfoViewController()
+        modalViewController.modalPresentationStyle = .overCurrentContext
+        
+        //presentViewController(modalViewController, animated: true, completion: nil)
+    }
 }
