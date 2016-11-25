@@ -9,8 +9,10 @@
 import Foundation
 import UIKit
 
-class PlaceCellDataSource: NSObject, UITableViewDataSource {
+class PlaceCellDataSource: NSObject, UITableViewDataSource, UITableViewDelegate {
     let places: [[String: AnyObject]]
+    
+    var selectedInfo: [String: AnyObject]!
     
     init(places: [[String: AnyObject]]) {
         self.places = places
@@ -27,10 +29,9 @@ class PlaceCellDataSource: NSObject, UITableViewDataSource {
         return cell
     }
     
-    func showInfo() {
-        let modalViewController = PlaceInfoViewController()
-        modalViewController.modalPresentationStyle = .overCurrentContext
-        
-        //presentViewController(modalViewController, animated: true, completion: nil)
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+     
+        self.selectedInfo = places[indexPath.row]
     }
+
 }

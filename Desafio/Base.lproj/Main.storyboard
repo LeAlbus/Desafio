@@ -11,7 +11,7 @@
         <scene sceneID="7bR-Ml-v0a">
             <objects>
                 <navigationController id="Azp-zV-GUQ" sceneMemberID="viewController">
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="rum-jI-pe5">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" misplaced="YES" id="rum-jI-pe5">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
@@ -115,6 +115,7 @@
                                 </constraints>
                             </imageView>
                         </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="Mcs-O6-Xe7" firstAttribute="leading" secondItem="lGR-TK-9r7" secondAttribute="leadingMargin" id="7kf-xo-VWj"/>
                             <constraint firstItem="Woc-1N-4kS" firstAttribute="top" secondItem="Do0-VY-Xxg" secondAttribute="bottom" id="AQw-xW-1IH"/>
@@ -143,10 +144,10 @@
             </objects>
             <point key="canvasLocation" x="2580" y="111.99400299850076"/>
         </scene>
-        <!--Places List Delegate-->
+        <!--Places List View Controller-->
         <scene sceneID="S2U-0Z-T5V">
             <objects>
-                <viewController id="yvk-NT-V3S" customClass="PlacesListDelegate" customModule="Desafio" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="yvk-NT-V3S" customClass="PlacesListViewController" customModule="Desafio" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="hHn-at-x8I"/>
                         <viewControllerLayoutGuide type="bottom" id="Bdp-md-zB7"/>
@@ -193,7 +194,7 @@
                                         <connections>
                                             <outlet property="iconView" destination="lnU-ox-Dbi" id="SmD-FF-7Y5"/>
                                             <outlet property="placeNameLabel" destination="a4U-FQ-cUn" id="8pV-UZ-ttA"/>
-                                            <segue destination="UIY-T0-bup" kind="show" id="aet-2J-75G"/>
+                                            <segue destination="UIY-T0-bup" kind="show" identifier="ShowInfoView" id="aet-2J-75G"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

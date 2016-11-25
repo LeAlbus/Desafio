@@ -17,7 +17,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var holdView: UIView!
     @IBOutlet var refreshButton: UIButton!
     
-    var placesListView: PlacesListDelegate!
+    var placesListView: PlacesListViewController!
     
     
     //var places = [[String: AnyObject]]()
@@ -63,7 +63,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Called before ViewDidLoad
         
-        if let vc = segue.destination as? PlacesListDelegate, segue.identifier == "PlacesListSegue" {
+        if let vc = segue.destination as? PlacesListViewController, segue.identifier == "PlacesListSegue" {
             
             self.placesListView = vc
         }

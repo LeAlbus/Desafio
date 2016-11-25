@@ -9,9 +9,12 @@
 import Foundation
 import UIKit
 
-class PlacesListDelegate: UIViewController{
+class PlacesListViewController: UIViewController{
     
     
+    var placesInfoView: PlaceInfoViewController!
+    var placeSelectedInfo: [String: AnyObject]!
+
     var dataSource: PlaceCellDataSource?
 
     @IBOutlet weak var tableView: UITableView!
@@ -30,9 +33,22 @@ class PlacesListDelegate: UIViewController{
         tableView.rowHeight = UITableViewAutomaticDimension
         
         //Sets the dataSource
-        tableView.dataSource = dataSource as! UITableViewDataSource?
+        tableView.dataSource = dataSource as UITableViewDataSource?
         
         //Reloads the tableView Content
         tableView.reloadData()
+    }
+    
+    
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        //Called before ViewDidLoad
+        
+        if let vc = segue.destination as? PlaceInfoViewController, segue.identifier == "ShowInfoView" {
+            
+            self.placesInfoView = vc
+            placeSelectedInfo = dataSource?.selectedInfo
+            placesInfoView.setInfo(info: self.placeSelectedInfo)
+        }
     }
 }

@@ -17,16 +17,17 @@ class PlaceInfoViewController: UIViewController{
     @IBOutlet var placeAdressLabel: UILabel!
     @IBOutlet var placeIconImageView: UIImageView!
     
-    //@IBOutlet var backButton: UIBarButtonItem!
-//    
-//    @IBAction func dismissView(_ sender: AnyObject) {
-//        
-//        self.dismissView(sender)
-//    }
+    var info: [String: AnyObject]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    }
+    
+    func setInfo (info: [String:AnyObject]){
         
-        //backButton.action = Selector(("dismissView"))
+        //self.info = info
+        
+        self.placeNameLabel.text = (info ["name"] as! String)
     }
     
     func dismissView(_ sender: AnyObject) {
@@ -35,6 +36,3 @@ class PlaceInfoViewController: UIViewController{
     }
 
 }
-
-//let modalVC = ModalVC.instantiateFromStoryboard(self.storyboard!)
-//self.presentViewController(modalVC, animated: true, completion: nil)
