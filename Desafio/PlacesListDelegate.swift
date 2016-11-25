@@ -15,22 +15,24 @@ class PlacesListDelegate: UIViewController{
     var dataSource: PlaceCellDataSource?
 
     @IBOutlet weak var tableView: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        tableView.estimatedRowHeight = 60
-//        tableView.rowHeight = UITableViewAutomaticDimension
-//        tableView.dataSource = dataSource as! UITableViewDataSource?
-//        tableView.reloadData()
     }
     
     func initDataSource(places: [[String: AnyObject]]){
         
+        //Initializes dataSource
         self.dataSource = PlaceCellDataSource(places: places)
         
+        //Sets the values in order to make the Cell increase size
         tableView.estimatedRowHeight = 60
         tableView.rowHeight = UITableViewAutomaticDimension
+        
+        //Sets the dataSource
         tableView.dataSource = dataSource as! UITableViewDataSource?
+        
+        //Reloads the tableView Content
         tableView.reloadData()
     }
 }

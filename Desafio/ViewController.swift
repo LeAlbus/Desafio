@@ -50,7 +50,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         if places.isEmpty{
             
         } else{
-            print("RELOADING")
+
             DispatchQueue.main.async {
                 () -> Void in
                 self.placesListView.initDataSource(places: places)
