@@ -18,6 +18,14 @@ class PlaceCellDataSource: NSObject, UITableViewDataSource, UITableViewDelegate 
         self.places = places
     }
     
+    func getPlaces() -> [[String: AnyObject]]{
+        return places
+    }
+    
+    func getPlaceAt(position: Int) -> [String: AnyObject]{
+        return places[position]
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return places.count
     }

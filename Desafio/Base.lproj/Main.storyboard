@@ -108,7 +108,8 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-Hy-P8r">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="gLa-Hy-P8r">
+                                <frame key="frameInset" minX="87" minY="118" width="200" height="200"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="200" id="8eE-2o-HY4"/>
                                     <constraint firstAttribute="width" constant="200" id="p4p-Er-vvx"/>
@@ -125,7 +126,7 @@
                             <constraint firstAttribute="trailingMargin" secondItem="pxL-bi-gIP" secondAttribute="trailing" id="and-eQ-uTt"/>
                             <constraint firstItem="gLa-Hy-P8r" firstAttribute="centerX" secondItem="lGR-TK-9r7" secondAttribute="centerX" id="dOy-a0-o3n"/>
                             <constraint firstItem="pxL-bi-gIP" firstAttribute="leading" secondItem="lGR-TK-9r7" secondAttribute="leadingMargin" id="oGN-SC-E1U"/>
-                            <constraint firstItem="gLa-Hy-P8r" firstAttribute="top" secondItem="pxL-bi-gIP" secondAttribute="bottom" constant="8" id="oHr-1J-TTB"/>
+                            <constraint firstItem="gLa-Hy-P8r" firstAttribute="top" secondItem="pxL-bi-gIP" secondAttribute="bottom" constant="50" id="oHr-1J-TTB"/>
                             <constraint firstItem="pxL-bi-gIP" firstAttribute="top" secondItem="csy-eF-m3v" secondAttribute="bottom" constant="8" id="p0Q-tE-ZuM"/>
                             <constraint firstAttribute="trailing" secondItem="Do0-VY-Xxg" secondAttribute="trailing" id="wVV-kC-rLn"/>
                             <constraint firstItem="Do0-VY-Xxg" firstAttribute="leading" secondItem="lGR-TK-9r7" secondAttribute="leading" id="zO0-aa-EBg"/>
@@ -160,11 +161,11 @@
                                 <frame key="frameInset" width="375" height="659"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceCell" id="xVE-9E-EWl" customClass="PlaceCell" customModule="Desafio" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="blue" accessoryType="disclosureIndicator" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="PlaceCell" id="xVE-9E-EWl" customClass="PlaceCell" customModule="Desafio" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="xVE-9E-EWl" id="4e9-ju-XiF">
-                                            <frame key="frameInset" width="375" height="43"/>
+                                            <frame key="frameInset" width="342" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="a4U-FQ-cUn">
@@ -194,7 +195,7 @@
                                         <connections>
                                             <outlet property="iconView" destination="lnU-ox-Dbi" id="SmD-FF-7Y5"/>
                                             <outlet property="placeNameLabel" destination="a4U-FQ-cUn" id="8pV-UZ-ttA"/>
-                                            <segue destination="UIY-T0-bup" kind="show" identifier="ShowInfoView" id="aet-2J-75G"/>
+                                            <segue destination="UIY-T0-bup" kind="show" identifier="showPlaceInfoSegue" id="5ms-Ms-VoN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>

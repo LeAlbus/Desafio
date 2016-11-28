@@ -176,8 +176,7 @@
 		40FFB3061DE5CE6F00CC7974 /* Objects */ = {
 			isa = PBXGroup;
 			children = (
-				A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */,
-				40FFB30A1DE5D38600CC7974 /* imageViewExtension.swift */,
+				A08BF2691DE15FE300DB1B24 /* JSONParser.swift */,
 				A08BF27F1DE7D71C00DB1B24 /* PlaceCell.swift */,
 				A08BF2821DE7D9B300DB1B24 /* PlaceCellDataSource.swift */,
 			);
@@ -238,8 +237,9 @@
 		A044FB831DE0E06000AC74E0 /* Application */ = {
 			isa = PBXGroup;
 			children = (
+				40FFB30A1DE5D38600CC7974 /* imageViewExtension.swift */,
+				A08BF2671DE15E0C00DB1B24 /* SwiftyJSON.swift */,
 				A044FB521DE0D8EA00AC74E0 /* AppDelegate.swift */,
-				A08BF2691DE15FE300DB1B24 /* JSONParser.swift */,
 			);
 			name = Application;
 			sourceTree = "<group>";

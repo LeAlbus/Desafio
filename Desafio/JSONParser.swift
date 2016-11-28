@@ -27,7 +27,8 @@ class JSONParser: NSObject{
                 place["name"] = result["name"].stringValue as AnyObject?
                 place["icon"] = result["icon"].stringValue as AnyObject?
                 //MARK: Not all the results show the open now information. Check for null result
-                place["open_now"] = result["opening_hours"]["open_now"].stringValue as AnyObject?
+                
+                place["open_now"] = result["opening_hours"]["open_now"].bool as AnyObject?
                 place["vicinity"] = result["vicinity"].stringValue as AnyObject?
 
                 places.append(place)

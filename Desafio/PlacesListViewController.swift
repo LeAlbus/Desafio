@@ -11,7 +11,7 @@ import UIKit
 
 class PlacesListViewController: UIViewController{
     
-    
+    let infoSegueIdentifier = "showPlaceInfoSegue"
     var placesInfoView: PlaceInfoViewController!
     var placeSelectedInfo: [String: AnyObject]!
 
@@ -24,6 +24,7 @@ class PlacesListViewController: UIViewController{
     }
     
     func initDataSource(places: [[String: AnyObject]]){
+        
         
         //Initializes dataSource
         self.dataSource = PlaceCellDataSource(places: places)
@@ -44,11 +45,14 @@ class PlacesListViewController: UIViewController{
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         //Called before ViewDidLoad
         
-        if let vc = segue.destination as? PlaceInfoViewController, segue.identifier == "ShowInfoView" {
+        
+        
+        if  segue.identifier == infoSegueIdentifier,
+            let vc = segue.destination as? PlaceInfoViewController,
+            let cellIndex = tableView.indexPathForSelectedRow?.row{
             
-            self.placesInfoView = vc
-            placeSelectedInfo = dataSource?.selectedInfo
-            placesInfoView.setInfo(info: self.placeSelectedInfo)
+            vc.info = self.dataSource?.getPlaceAt(position: cellIndex)
         }
+      
     }
 }
