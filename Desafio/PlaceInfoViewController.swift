@@ -21,6 +21,7 @@ class PlaceInfoViewController: UIViewController{
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.navigationController?.navigationBar.backItem?.title = "Details"
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -47,17 +48,6 @@ class PlaceInfoViewController: UIViewController{
         
         placeIconImageView.downloadedFrom(link: (info?["icon"] as! String))
     }
-    
-    func setInfo (info: [String:AnyObject]){
-        
-        //self.info = info
-        
-        self.placeNameLabel.text = (info ["name"] as! String)
-    }
-    
-    func dismissView(_ sender: AnyObject) {
-        
-        self.dismissView(sender)
-    }
+
 
 }

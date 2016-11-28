@@ -11,14 +11,16 @@ import CoreLocation
 //import GooglePlaces
 //import GooglePlacePicker
 
-class ViewController: UIViewController, CLLocationManagerDelegate {
- 
-    @IBOutlet weak var placesContainerView: UIView!
-    @IBOutlet weak var holdView: UIView!
-    @IBOutlet var refreshButton: UIButton!
+class MainViewController: UITableViewController, CLLocationManagerDelegate {
+// 
+//    @IBOutlet weak var placesContainerView: UIView!
+//    @IBOutlet weak var holdView: UIView!
+//    @IBOutlet var refreshButton: UIButton!
+//    
+    let infoSegueIdentifier = "showPlaceInfoSegue"
+
     
-    var placesListView: PlacesListViewController!
-    
+    @IBOutlet var placesListView: PlacesListView!
     
     //var places = [[String: AnyObject]]()
     
@@ -30,8 +32,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
         
         self.locationManager = CLLocationManager()
         self.locationManager.delegate = self
-        
-
+        self.refreshControl?.addTarget(self, action: #selector(MainViewController.runSearch), for: UIControlEvents.valueChanged)
+    
     }
     
     func runSearch(){
@@ -56,19 +58,21 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
                 self.placesListView.initDataSource(places: places)
             }
         }
-        
+        self.refreshControl?.endRefreshing()
     }
-    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        //Called before ViewDidLoad
-        
-        if let vc = segue.destination as? PlacesListViewController, segue.identifier == "PlacesListSegue" {
-            
-            self.placesListView = vc
+
+        if  segue.identifier == infoSegueIdentifier,
+            let vc = segue.destination as? PlaceInfoViewController,
+            let cellIndex = self.placesListView.indexPathForSelectedRow?.row{
+            print( ((self.placesListView.dataSource) as! PlaceCellDataSource).getPlaceAt(position: cellIndex))
+            vc.info = ((self.placesListView.dataSource) as! PlaceCellDataSource).getPlaceAt(position: cellIndex)
         }
+        
     }
-    
+
+    //MARK: request access to location services
     func locationManager(_ manager: CLLocationManager, didChangeAuthorization status: CLAuthorizationStatus){
         //This function is called whenever the app's access to location services is changes
         //It is always called when the app starts
