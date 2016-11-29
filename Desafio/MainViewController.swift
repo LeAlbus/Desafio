@@ -8,15 +8,10 @@
 
 import UIKit
 import CoreLocation
-//import GooglePlaces
-//import GooglePlacePicker
+
 
 class MainViewController: UITableViewController, CLLocationManagerDelegate {
-// 
-//    @IBOutlet weak var placesContainerView: UIView!
-//    @IBOutlet weak var holdView: UIView!
-//    @IBOutlet var refreshButton: UIButton!
-//    
+
     let infoSegueIdentifier = "showPlaceInfoSegue"
 
     
